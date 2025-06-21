@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Học Từ Mới - VocabHub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="learn.css">
+</head>
+<body>
+    <div class="app-container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h3>VocabHub</h3>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="menu-item">
+                    <a href="index.html">Thư viện</a>
+                </li>
+                <li class="menu-item active">
+                    <a href="learn.html">Học Từ Mới</a>
+                </li>
+                <li class="menu-item">
+                    <a href="review.html">
+                        <span>Ôn tập hôm nay</span>
+                        <span class="badge" id="sidebar-review-count">0</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">Tiến độ</a>
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <a href="#">Cài đặt</a>
+                <a href="#">Đăng xuất</a>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Học Từ Mới</h1>
+                <p class="subtitle">Chọn một bộ từ vựng để bắt đầu hành trình của bạn.</p>
+            </header>
+
+            <div class="topic-grid">
+                <div class="topic-card">
+                    <div class="topic-info">
+                        <h3>5000 Từ Thông Dụng</h3>
+                        <p>Nền tảng vững chắc cho mọi kỹ năng.</p>
+                    </div>
+                    <button class="topic-button">Bắt đầu</button>
+                </div>
+                <div class="topic-card disabled">
+                    <div class="topic-info">
+                        <h3>IELTS Band 8.0+</h3>
+                        <p>Chinh phục các từ vựng học thuật cấp cao.</p>
+                    </div>
+                    <div class="coming-soon">Đang cập nhật</div>
+                </div>
+                 <div class="topic-card disabled">
+                    <div class="topic-info">
+                        <h3>Từ vựng Thiết kế vi mạch</h3>
+                        <p>Dành riêng cho chuyên ngành của bạn.</p>
+                    </div>
+                     <div class="coming-soon">Đang cập nhật</div>
+                </div>
+            </div>
+
+            <div id="learning-interface" class="hidden">
+                 <div class="word-card">
+                    <div class="word-image-container hidden" id="word-image-container">
+                        <img src="" alt="Image for word" id="word-image">
+                    </div>  
+                     <div class="word-header">
+                         <h2 id="word">essential</h2>
+                         <span id="ipa">/ɪˈsen.ʃəl/</span>
+                         <button id="play-audio-btn">🔊</button>
+                     </div>
+                     <div class="word-meta">
+                         <span id="word-type" class="tag">adjective</span>
+                         <span id="word-level" class="tag">B2</span>
+                     </div>
+                     <div class="word-body">
+                         <div class="definition">
+                             <strong>EN:</strong> <span id="def-en">absolutely necessary or extremely important.</span>
+                         </div>
+                         <div class="definition">
+                             <strong>VI:</strong> <span id="def-vi">thiết yếu, cực kỳ quan trọng.</span>
+                         </div>
+                         <div class="example">
+                             <p><strong>Ví dụ:</strong> <span id="example-general">"Good communication skills are essential for this job."</span></p>
+                             <p><strong>Chuyên ngành:</strong> <span id="example-domain">"It is essential to verify the timing of the circuit before manufacturing the chip."</span></p>
+                         </div>
+                     </div>
+                     <div class="word-actions">
+                        <button class="action-btn skip">Từ tiếp theo</button>
+                        <button class="action-btn learn">Học từ này</button>
+                     </div>
+                 </div>
+            </div>
+        </main>
+    </div>
+    <script src="config.js"></script>
+    <script src="common.js"></script>
+    <script src="learn.js"></script>
+</body>
+</html>

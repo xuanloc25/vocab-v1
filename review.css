@@ -1,0 +1,95 @@
+/* Giao diện chính của trang ôn tập */
+#review-interface {
+    max-width: 700px;
+    margin: 40px auto 0 auto;
+    perspective: 1000px; /* Cho hiệu ứng lật thẻ */
+}
+
+.review-card {
+    position: relative;
+    width: 100%;
+    min-height: 350px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.review-card.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.review-front, .review-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Ẩn mặt sau khi nhìn từ đằng trước */
+    background: #fff;
+    border: 1px solid #DEE2E6;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.review-front h2 {
+    font-size: 64px;
+    color: #212529;
+    margin-bottom: 32px;
+}
+
+.review-back {
+    transform: rotateY(180deg);
+    align-items: flex-start;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#no-review-message {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 18px;
+    color: #6C757D;
+}
+
+/* Các thành phần trên mặt sau của thẻ */
+.word-header { display: flex; align-items: baseline; gap: 16px; }
+.word-header #review-ipa { font-size: 20px; color: #6C757D; }
+.word-header #review-play-audio-btn { font-size: 24px; background: none; border: none; cursor: pointer; }
+.definition, .example { margin: 12px 0; width: 100%;}
+.definition strong { color: #212529; }
+.example p { font-style: italic; }
+
+.srs-actions {
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #E9ECEF;
+    padding-top: 20px;
+}
+
+.srs-buttons {
+    display: flex;
+    gap: 16px;
+    margin-top: 12px;
+}
+
+.srs-btn {
+    flex-grow: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.srs-btn:hover { opacity: 0.8; }
+.srs-btn.hard { background-color: #DC3545; } /* Đỏ */
+.srs-btn.good { background-color: #007BFF; } /* Xanh dương */
+.srs-btn.easy { background-color: #28A745; } /* Xanh lá */

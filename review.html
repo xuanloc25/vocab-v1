@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ôn tập - VocabHub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="review.css">
+</head>
+<body>
+    <div class="app-container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h3>VocabHub</h3>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="menu-item">
+                    <a href="index.html">Thư viện</a>
+                </li>
+                <li class="menu-item">
+                    <a href="learn.html">Học Từ Mới</a>
+                </li>
+                <li class="menu-item active ">
+                    <a href="review.html">
+                        <span>Ôn tập hôm nay</span>
+                        <span class="badge" id="sidebar-review-count">0</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">Tiến độ</a>
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <a href="#">Cài đặt</a>
+                <a href="#">Đăng xuất</a>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Ôn tập hôm nay</h1>
+                <p class="subtitle">Bạn có <span id="review-count">0</span> từ cần ôn tập.</p>
+            </header>
+
+            <div id="review-interface" class="hidden">
+                <div class="review-card">
+                    <div class="review-front">
+                        <h2 id="review-word">Word</h2>
+                        <button id="show-answer-btn" class="primary-button">Hiện đáp án</button>
+                    </div>
+                    <div class="review-back hidden">
+                        <div class="word-header">
+                             <span id="review-ipa">/ipa/</span>
+                             <button id="review-play-audio-btn">🔊</button>
+                        </div>
+                         <div class="definition">
+                             <strong>EN:</strong> <span id="review-def-en">English definition.</span>
+                         </div>
+                         <div class="definition">
+                             <strong>VI:</strong> <span id="review-def-vi">Vietnamese definition.</span>
+                         </div>
+                         <div class="example">
+                             <p><span id="review-example">Example sentence.</span></p>
+                         </div>
+                        <div class="srs-actions">
+                            <p>Bạn thấy từ này thế nào?</p>
+                            <div class="srs-buttons">
+                                <button class="srs-btn hard" data-level-change="-1">Khó</button>
+                                <button class="srs-btn good" data-level-change="0">Tạm ổn</button>
+                                <button class="srs-btn easy" data-level-change="1">Dễ</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="no-review-message">
+                <p>Tuyệt vời! Bạn đã hoàn thành hết các từ cần ôn tập hôm nay.</p>
+            </div>
+        </main>
+    </div>
+    <script src="config.js"></script>
+    <script src="common.js"></script>
+    <script src="review.js"></script>
+</body>
+</html>

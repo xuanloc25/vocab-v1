@@ -1,0 +1,103 @@
+/* Giao diện chọn chủ đề */
+.subtitle {
+    margin-top: -24px;
+    margin-bottom: 32px;
+    color: #6C757D;
+}
+.topic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+}
+.topic-card {
+    background: #fff;
+    border: 1px solid #DEE2E6;
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.topic-card:not(.disabled):hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.1);
+}
+.topic-card.disabled {
+    opacity: 0.6;
+    background-color: #F8F9FA;
+    position: relative;
+    overflow: hidden;
+}
+.coming-soon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+.topic-info h3 { margin-bottom: 8px; }
+.topic-info p { color: #6C757D; font-size: 14px; }
+.topic-button {
+    margin-top: 24px;
+    background-color: #007BFF;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Giao diện học từ */
+.hidden { display: none !important; }
+
+#learning-interface {
+    max-width: 700px;
+    margin: 40px auto 0 auto;
+}
+.word-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 32px;
+    border: 1px solid #DEE2E6;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+.word-header { display: flex; align-items: baseline; gap: 16px; }
+.word-header h2 { font-size: 48px; color: #007BFF; }
+.word-header #ipa { font-size: 20px; color: #6C757D; }
+.word-header #play-audio-btn { font-size: 24px; background: none; border: none; cursor: pointer; }
+.word-meta { display: flex; gap: 12px; margin: 8px 0 24px 0; }
+.tag { background-color: #E9ECEF; color: #495057; padding: 4px 10px; border-radius: 16px; font-size: 14px; font-weight: 500; }
+.word-body .definition, .word-body .example { margin-bottom: 16px; }
+.word-body strong { color: #212529; }
+.example p { margin-bottom: 8px; }
+.word-actions {
+    margin-top: 32px;
+    display: flex;
+    gap: 16px;
+}
+.action-btn {
+    flex-grow: 1;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: 2px solid #DEE2E6;
+    background: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.action-btn.learn {
+    background-color: #28A745;
+    border-color: #28A745;
+    color: #fff;
+}
+.action-btn:hover { transform: translateY(-2px); }

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Vocabulary Hub</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <nav class="sidebar">
+        <div class="sidebar-header">
+          <h3>VocabHub</h3>
+        </div>
+        <ul class="sidebar-menu">
+          <li class="menu-item active">
+            <a href="index.html">Thư viện</a>
+          </li>
+          <li class="menu-item">
+            <a href="learn.html">Học Từ Mới</a>
+          </li>
+          <li class="menu-item">
+            <a href="review.html">
+              <span>Ôn tập hôm nay</span>
+              <span class="badge" id="sidebar-review-count">0</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="#">Tiến độ</a>
+          </li>
+        </ul>
+        <div class="sidebar-footer">
+          <a href="#">Cài đặt</a>
+          <a href="#">Đăng xuất</a>
+        </div>
+      </nav>
+
+      <main class="main-content">
+        <header class="main-header">
+          <h1>Thư viện của bạn</h1>
+          <button class="primary-button">+ Thêm nội dung mới</button>
+        </header>
+
+        <div class="content-grid">
+          <div class="card">
+            <h4>How CPUs are Designed and Made</h4>
+            <p class="card-source">Nguồn: TechCrunch</p>
+            <div class="card-progress">
+              <p>Tiến độ: 75%</p>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 75%"></div>
+              </div>
+            </div>
+            <a href="#" class="card-button">Đọc tiếp</a>
+          </div>
+
+          <div class="card">
+            <h4>Understanding VLSI Design Flow</h4>
+            <p class="card-source">Nguồn: IEEE Spectrum</p>
+            <div class="card-progress">
+              <p>Tiến độ: 30%</p>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 30%"></div>
+              </div>
+            </div>
+            <a href="#" class="card-button">Bắt đầu đọc</a>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="config.js"></script>
+    <script src="common.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
